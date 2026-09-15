@@ -91,10 +91,10 @@ public class RenderHelper {
         matrixStack.pushMatrix();
         matrixStack.translate((float)x, (float)y, 100.0F /*+ renderer.zOffset*/);
         matrixStack.translate(8.0F, 8.0F, 0.0F);
-        matrixStack.scale(1.0F, -1.0F, 1.0F);
         matrixStack.scale(16.0F, 16.0F, 16.0F);
         RenderSystem.applyModelViewMatrix();
         MatrixStack matrixStack2 = new MatrixStack();
+        matrixStack2.scale(1.0F, -1.0F, 1.0F);
         VertexConsumerProvider.Immediate immediate = MinecraftClient.getInstance().getBufferBuilders().getEntityVertexConsumers();
         boolean bl = !model.isSideLit();
         if (bl) {
